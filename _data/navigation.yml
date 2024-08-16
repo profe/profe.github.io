@@ -3,9 +3,15 @@ main:
 
       #  - title: "Talks"
       #    url: /talks/    
+  - title: "Bio"
+    url: /bio/
+
+  - title: "Resources"
+    url: /resources/
 
   - title: "Teaching"
     url: /teaching/    
+
     
   - title: "Publications"
     url: /publications/
@@ -19,5 +25,5 @@ main:
   - title: "CV"
     url: /cv/
     
-  - title: "Guide"
-    url: /markdown/
+      #  - title: "Guide"
+      #    url: /markdown/
