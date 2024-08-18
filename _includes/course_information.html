@@ -1,12 +1,13 @@
 <header class="columns">
+
   <div class="column col-md-12">
     <h1>Course Information</h1>
   </div>
-  {% if page.course.meetings != nil or page.course.time != nil %}
-  <div class="column col-md-6">
+
+  {% if page.course.meetings != nil %}
+  <div class="column col-md-12">
     <h2 class="border-bottom-0 pb-0">Meeting Time & Location</h2>
     <ul>
-      <li>{{ page.course.term }}</li>
       {% if page.course.meetings %}
         {% for meeting in page.course.meetings %}
       <li>{{ meeting.time }}, {{ meeting.location }}</li>
@@ -17,33 +18,52 @@
     </ul>
   </div>
   {%endif%}
+
+  {% if page.course.welcome %}
+  <div class="column col-md-6">
+    <h2 class="border-bottom-0 pb-0">Welcome</h2>
+    <div style="font-style: italic;">{{course.welcome}}</div>
+  </div>
+  {%endif%}
+
+  {% if page.course.instructors != nil %}
   <div class="column col-md-{% if page.course.meetings == nil and page.course.time == nil %}12{%else%}6{%endif%}">
-    {% if page.instructors != nil %}
-    <h2 class="border-bottom-0 pb-0">Instructor{% if page.instructors.size > 1 %}s{%endif%}</h2>
-    <ul>
-    {% for instructor in page.instructors %}
+    <h2 class="border-bottom-0 pb-0">Instructor{% if page.course.instructors.size > 1 %}s{%endif%}</h2>
+    <ul style="list-style-type:none;">
+    {% for instructor in page.course.instructors %}
+    <img src="{{instructor.avatar}}" height="100px"/>
       <li>
-        <strong>{{instructor.name}}</strong>
-        <ul>
+	      <strong>{{instructor.name}}</strong> ({{instructor.pronouns}})
+        <ul style="list-style-type:none;">
           <li>
-            Contact: <a href="mailto: {{ instructor.email }}">{{ instructor.email }}</a>
+            Email: <a href="mailto: {{ instructor.email }}">{{ instructor.email }}</a>
           </li>
+	  <li>
+	    Text: {{instructor.phone}}
+	  </li>
           {% if instructor.office != nil %}
           <li>
-            Office Hours &amp; Locations:
+            Student Office Hours:
             <ul>
             {% for office in instructor.office %}
-            <li>{{office.hours}}, {{ office.location}}</li>  
+	      {% if office.location == "Zoom" %}
+	      <li>{{office.hours}}, <a href="{{office.link}}" />Zoom</a></li>
+	      {%else%}
+                <li>{{office.hours}}, {{ office.location}}</li>  
+	      {%endif%}
             {% endfor %}
             </ul>
           </li>
+	  <li>Times above don't work?</li>
+	  <li>Book an appointment <a href="{{instructor.appointment}}" />here</a>!</li>
           {% endif %}
         </ul>
       </li>
     {% endfor %}
     </ul>
-    {% endif %}
   </div>
+  {% endif %}
+
   {% if page.course.description != nil %}
   <div class="column col-md-12">
     <h2 class="border-bottom-0 pb-0">Course Description</h2>
@@ -52,4 +72,42 @@
     </blockquote>
   </div>
   {%endif%}
+
+  {% if page.course.outcomes != nil %}
+  <div class="column col-md-12">
+    <h2 class="border-bottom-0 pb-0">Course Learning Outcomes</h2>
+    <p>At the conclusion of this course, students will be able to demonstrate the following outcomes:</p>
+    <ol>
+      {% for outcome in page.course.outcomes %}
+	<li>{{outcome}}</li>
+      {%endfor%}
+    </ol>
+  </div>
+  {%endif%}
+
+  {% if page.course.question != nil %}
+  <div class="column col-md-12">
+	  <h2 class="border-bottom-0 pb-0">Course-Level Question</h2>
+	  <strong><center><big><i>{{page.course.question}}</i></big></center></strong>
+  </div>
+  {%endif%}
+
+  {% if page.course.units != nil %}
+  <div class="column col-md-12">
+    <h2 class="border-bottom-0 pb-0">Course Topics</h2>
+    The semester is broken up into multiple units, each unit organized 3-4 weeks of material into a bigger idea in our course. Each week, we cover a new skill/concept and connect it to the unit theme. The following is an overview of the units and topics for this course:
+    <ul>
+    {% for unit in page.course.units %}
+      {% assign index = {{forloop.index}} %}
+      <li style="font-style:italic;">Unit {{index}}: {{unit.name}}</li>
+        <ul>
+	  {% for topic in unit.topics %}
+            <li>{{topic}}</li>
+	  {%endfor%}
+	</ul>
+    {%endfor%}
+    </ul>
+  </div>
+  {%endif%}
+
 </header>
