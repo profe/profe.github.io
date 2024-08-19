@@ -4,6 +4,7 @@ title: "Resources"
 permalink: /resources/
 author_profile: true
 ---
+# Student Resources
 
 > "As a classroom community, our capacity to generate excitement is deeply affected by our interest in one another, in hearing one another’s voices, in recognizing one another’s presence." - bell hooks, Teaching to Transgress
 
