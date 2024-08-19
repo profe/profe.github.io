@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Profe Nery"
+title: "Nery Chapetón-Lamas"
 author_profile: true
 redirect_from: 
   - /about/

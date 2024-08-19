@@ -18,6 +18,6 @@ First-time teaching this class I haven't seen in 15 years and failed the first t
 ======
 Amazing true introduction to CS that expects zero programming/CS experience! If you have programmed at all, consider another course
 
-CS112 (online)
+[CS112 (online)](/2024/2024-fall-cs112-2008)
 ======
 Java 2 course, can be tough online but GOALS in CS version helps with that. Stay engaged, connect with your classmates, and stay on top of each weeks materials!
