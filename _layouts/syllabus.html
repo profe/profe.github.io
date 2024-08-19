@@ -42,6 +42,9 @@
         {% include course_information.html %}
         {{ content }}
 	<!-- ADD STUDENT RESOURCES HERE-->
+	<h1 class="border-bottom-0">Student Resources</h1>
+	{% assign resources-page = site.pages | where: "title", "Resources" | first %}
+	{{ resources-page.content | markdownify }}
 	<!-- ADD GENERAL POLICIES HERE -->
       </div>
 

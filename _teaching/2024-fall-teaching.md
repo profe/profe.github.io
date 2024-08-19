@@ -14,7 +14,7 @@ CS226 (in-person)
 ======
 First-time teaching this class I haven't seen in 15 years and failed the first time I took it. Wish us luck! XD
 
-[CS101 (online)](/schedule)
+[CS101 (online)](/2024/2024-fall-cs101-2242)
 ======
 Amazing true introduction to CS that expects zero programming/CS experience! If you have programmed at all, consider another course
 
