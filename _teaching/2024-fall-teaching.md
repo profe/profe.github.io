@@ -10,7 +10,7 @@ location: "Oceanside, CA"
 
 Online CS101+CS112, first time CS226
 
-CS226 (in-person)
+[CS226 (in-person)](/2024/2024-fall-cs226-2151)
 ======
 First-time teaching this class I haven't seen in 15 years and failed the first time I took it. Wish us luck! XD
 
