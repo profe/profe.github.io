@@ -8,7 +8,7 @@ date: 2024-08-19
 location: "Oceanside, CA"
 ---
 
-Online CS101+CS112, first time CS226
+Online CS101+CS112, first time CS226, CS2ZTC grant lead
 
 [CS226 (in-person)](/2024/2024-fall-cs226-2151)
 ======
