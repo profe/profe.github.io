@@ -8,7 +8,7 @@ date: 2026-01-20
 location: "Oceanside, CA"
 ---
 
-In-person CS226, CS2ZTC grant lead, and Department Chair
+In-person CS112, CS2ZTC grant lead, and Department Chair
 
 # [CS112 (in-person)](/2026/2026-spring-cs112-1262)
 
